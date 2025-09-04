@@ -1,0 +1,71 @@
+.swiperSection {
+  position: relative;
+  width: 100%;
+  padding-top:4rem;
+  padding-bottom:4rem;
+}
+
+.content {
+  position: relative;
+}
+
+.container {
+  position: relative;
+}
+
+.swiperContainer {
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.swiperPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiperButtonNext,
+.swiperButtonPrev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  color: var(--foreground);
+  padding: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.swiperButtonNext:hover,
+.swiperButtonPrev:hover {
+  opacity: 0.8;
+}
+
+.swiperButtonPrev {
+  left: -100px;
+}
+
+.swiperButtonNext {
+  right: -100px;
+}
+
+.arrow {
+  display: inline-block;
+  font-weight: 600;
+  color:rgb(171, 9, 9);
+  font-size: 45px;
+}

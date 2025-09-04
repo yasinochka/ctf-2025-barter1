@@ -1,0 +1,340 @@
+.packagesSection {
+  padding: 15rem 2rem;
+  position: relative;
+  scroll-margin: 90px;
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  overflow-x: visible;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 300;
+  overflow-x: visible;
+}
+
+.packagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  overflow-x: visible;
+}
+
+.packageCard {
+  padding: 1.5rem;
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  background: linear-gradient(
+    to top,
+    #2b2929 0%, 
+    #26060637 60%, 
+    #000000 80%
+  );
+  transition: background 0.3s ease;
+  overflow-x: visible;
+}
+
+.packageCardBase,
+.packageCardSelected {
+  background: linear-gradient(
+    to top,
+    #bd0612af 0%,    
+    #710d15b7 10%,   
+    #000000d6 65%,   
+    #710d15a7 90%,   
+    #c20713b4 100% 
+  );
+  transition: background 0.5s ease; 
+  overflow-x: visible;
+}
+
+.packageTitle {
+  font-size: 25px;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-weight: 300;
+  text-align: center;
+  overflow-x: visible;
+}
+
+.mandatoryText {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  text-align: center;
+  overflow-x: visible;
+}
+
+.packageFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1rem auto;
+  overflow-x: visible;
+  max-height: 200px; 
+  overflow-y: auto;
+}
+
+.featureItem {
+  font-size: 0.9rem;
+  padding-left: 1.2rem;
+  position: relative;
+  word-spacing: 3px;
+  font-weight: 200;
+  color: #fff;
+  text-align: center;
+  overflow-x: visible;
+}
+
+.unionBase {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cornerIconLeft {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+}
+
+.cornerIconRight {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #1d1b1b;
+  color: #ffffff;
+  padding: 1.5rem; 
+  border-radius: 0.25rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: left;
+  height: 80vh; 
+  overflow-y: auto; 
+  text-align: justify;
+  border: 2px solid #800000;
+  padding-left: 20px; 
+}
+
+.modalFeatures {
+  list-style: none;
+  padding: 0;
+  margin-left: -1rem; 
+}
+
+.modalFeatures li {
+  margin-bottom: 1.5rem; 
+  word-wrap: break-word; 
+  max-width: 100%; 
+}
+
+.modalFeatures li h3 {
+  font-size: 1.3rem;
+  font-weight: 700; 
+  color: #ffffff; 
+  margin-bottom: 0.5rem; 
+  text-align: left; 
+}
+
+.modalFeatures li p {
+  margin: 0;
+  font-size: 1.1rem; 
+  font-weight: 400; 
+  line-height: 1.6; 
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease; 
+  z-index: 20;
+}
+
+.closeIcon:hover {
+  transform: scale(1.2); 
+}
+
+.cornerIconLeft{
+  position: absolute;
+  top:400px;
+  left:-100px;
+}
+
+.cornerIconRight{
+  position: absolute;
+  top:30px;
+  right:-50px;
+}
+
+.infoBase,
+.infoBrand,
+.infoFlow {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 15;
+  touch-action: manipulation;
+  transition: transform 0.3s ease;
+}
+
+.infoBase:hover,
+.infoBrand:hover,
+.infoFlow:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .packageCard {
+    width: 100%;
+    height: 350px;
+    position: relative;
+  }
+  .packageTitle {
+    font-size: 1.5rem;
+  }
+  .infoBase,
+  .infoBrand,
+  .infoFlow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 15;
+    margin: 0;
+    display: block;
+    transition: transform 0.3s ease; 
+  }
+  .infoBase:hover,
+  .infoBrand:hover,
+  .infoFlow:hover {
+    transform: scale(1.1);
+  }
+  .closeIcon:hover {
+    transform: scale(1.1);
+  }
+  .cornerIconLeft {
+    display: none;
+  }
+  .cornerIconRight {
+    display: none;
+  }
+}
+
+.modalOverlay {
+  opacity: 0; 
+  animation: fadeIn 0.4s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  transform: scale(0.8); 
+  opacity: 0; 
+  animation: scaleIn 0.2s ease-in-out forwards; 
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.modalOverlay.closing {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+.modalContent.closing {
+  animation: scaleOut 0.2s ease-in-out forwards;
+}
+
+.modalContent {
+  font-family: 'Arial', sans-serif; 
+  font-size: 1.1rem;
+  line-height: 1.6; 
+}
+
+.modalFeatures {
+  padding-left: 1rem; 
+}
+
+.modalFeatures li {
+  margin-bottom: 1.5rem; 
+  word-wrap: break-word; 
+  max-width: 100%; 
+  color: #ffffff; 
+  font-weight: 560;
+}
+
+.modalTitle {
+  margin-bottom: 2rem; 
+  font-weight: 500; 
+  color: #ffffff; 
+}

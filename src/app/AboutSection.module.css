@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Miniver&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Petrona:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Tektur:wght@400..900&display=swap');
+
+.aboutSection {
+  padding: 7rem 8rem;
+  color: #fff;
+  background-color: var(--background);
+  overflow: hidden;
+  position: relative;
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto; 
+  width: 100%;
+  overflow-x: visible;
+}
+
+.glowingTextWrapper {
+  padding: 1rem;
+  animation: glow 3s ease-in-out infinite; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1400px;
+  overflow-x: visible;
+}
+
+.textBlock {
+  flex: 1;
+  width: 600px; 
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow-x: visible;
+  position: relative;
+}
+@keyframes glow {
+  0% {
+    border-color: rgb(149, 12, 12);
+    box-shadow: 
+      0 0 10px rgb(156, 5, 5),
+      0 0 20px rgb(156, 5, 5),
+      0 0 30px rgba(156, 5, 5, 0.5);
+  }
+  33% {
+    border-color: rgb(205, 38, 38);
+    box-shadow: 
+      0 0 15px rgb(181, 16, 16),
+      0 0 25px rgb(176, 26, 26),
+      0 0 35px rgba(187, 22, 22, 0.756);
+  }
+  66% {
+    border-color: rgb(187, 12, 12);
+    box-shadow: 
+      0 0 20px rgb(174, 13, 13),
+      0 0 30px rgb(157, 14, 14),
+      0 0 40px rgba(158, 3, 3, 0.741);
+  }
+  100% {
+    border-color: rgb(149, 12, 12);
+    box-shadow: 
+      0 0 10px rgb(156, 5, 5),
+      0 0 20px rgb(156, 5, 5),
+      0 0 30px rgba(169, 5, 5, 0.635);
+  }
+}
+.mainHeading {
+  position: relative;
+  font-weight: 580;
+  font-size: 3rem;
+  margin-left: 1rem;
+  line-height: 1.2;
+  overflow-x: visible;
+}
+
+.textContent {
+  text-align: left;
+  overflow-x: visible;
+}
+
+.paragraph1 {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 1rem 0.6rem;
+  max-width: 450px;
+  word-wrap: break-word;
+  overflow-x: visible;
+}
+
+.paragraph2 {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  word-wrap: break-word;
+  overflow-x: visible;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  overflow-x: visible;
+}
+
+.goalList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  overflow-x: visible;
+}
+
+.goalList li {
+  font-size: 16px;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  max-width: 450px;
+  word-wrap: break-word;
+  overflow-x: visible;
+}
+
+.highlight {
+  color: #a80505;
+  font-weight: 700;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  overflow-x: visible;
+}
+
+.highlight:hover {
+  transform: scale(1.1);
+  color: #d90404;
+  overflow-x: visible;
+}
+
+.imageBlock {
+  position: relative;
+  top: 8px;
+  width: 600px; 
+  border-radius: 1rem;
+  overflow-x: visible;
+}
+
+.eventImage {
+  width: 100%;
+  max-width: 600px; 
+  height: auto;
+  object-fit: cover;
+  display: block;
+  overflow-x: visible;
+}
+
+@media (max-width: 1280px) {
+  .textBlock {
+    width: 650px;
+  }
+
+  .eventImage {
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .textBlock {
+    width: 700px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 0.5rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contentWrapper {
+    margin: 0 auto; 
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 320px; 
+  }
+
+  .textBlock {
+    width: 320px; 
+    padding: 1rem;
+    background-image: none; 
+    margin: 0 auto 1.5rem;
+  }
+
+  .glowingTextWrapper {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+      box-shadow: 0 0 70px #870101, 0 0 40px #a00202; 
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .mainHeading {
+    font-size: 3rem; 
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .textContent {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: -2px;
+  }
+
+  .paragraph1,
+  .paragraph2,
+  .goalList li {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 300px;
+    padding: 0.2rem;
+    margin: 0 auto;
+  }
+
+  .subTitle {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .imageBlock {
+    width: 320px; 
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+  }
+
+  .eventImage {
+    width: 100%;
+    max-width: 320px; 
+    max-height: 450px;
+    object-fit: contain;
+    margin: 0 auto;
+    left: 0;
+  }
+}
+
+@media (min-width: 2560px) {
+  .contentWrapper {
+    max-width: 1400px; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .textBlock {
+    width: 600px; 
+    padding: 2rem;
+  }
+
+  .imageBlock {
+    width: 600px;
+    max-width: 600px;
+    top: 8px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .eventImage {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+  }
+}

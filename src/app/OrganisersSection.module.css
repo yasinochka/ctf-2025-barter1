@@ -1,0 +1,339 @@
+.organisersSection {
+  position: relative;
+  padding: 0px 80px;
+  color: #fff;
+  overflow-x: visible;
+}
+
+.content {
+  margin: 40px 80px;
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: visible;
+}
+
+.title {
+  font-size: 44px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  overflow-x: visible;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+  color: #fff;
+  z-index: 2;
+  padding: 10px;
+  width: 500px;
+  overflow-x: visible;
+}
+
+.highlightedText {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  position: relative;
+  top: 18px;
+  right: 185px;
+}
+
+.mainText {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  top: 20px;
+  right: 180px;
+  white-space: nowrap;
+  text-align: left; 
+}
+
+.logoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  margin-bottom: 40px;
+  opacity: 1;
+  min-height: 300px;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.logoFaded {
+  opacity: 0.6;
+}
+
+.logoShifted {
+  margin-top: 25px;
+}
+
+.mapContainer {
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  overflow-x: visible;
+}
+
+.radarContainer {
+  position: absolute;
+  top: -300px;
+  right: 61%;
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.85;
+}
+
+.stats {
+  position: absolute;
+  top: 41%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+
+.statGroup {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 80px;
+}
+
+.statColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.statColumn > :not(:first-child) {
+  margin-top: 60px;
+}
+
+.statItem {
+  font-size: 32px;
+  font-weight: 500;
+  color: #ff0000;
+  text-align: center;
+  white-space: normal;
+}
+
+.statText {
+  display: block;
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 5px;
+  white-space: normal;
+}
+
+.textContainer {
+  margin-bottom: 40px;
+  text-align: left;
+  font-size: 1em;
+}
+
+.textContainer p {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .organisersSection {
+    padding: 0px 20px;
+  }
+
+  .content {
+    margin: 20px 20px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .logoContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .highlightedText {
+    font-size: large;
+  }
+
+  .textOverlay {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .highlightedText {
+    display: none;
+  }
+
+  .mainText {
+    position: static;
+    line-height: 1.4;
+    padding: 15px;
+    color: #fff;
+    z-index: 2;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: left; 
+    white-space: normal;
+    max-width: none;
+  }
+
+  .logoFaded {
+    position: absolute;
+    width: 110%;
+    height: 280px;
+    opacity: 0.8;
+    overflow-y: hidden;
+    top: 0;
+  }
+
+  .logoShifted {
+    position: absolute;
+    width: 150px;
+    height: 90px;
+    margin: 0.5rem;
+    top: 50%;
+    left: 60%;
+    overflow-y: hidden;
+  }
+
+  .mapContainer {
+    bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .radarContainer {
+    top: -280px;
+    right: 95%;
+    transform: translateX(50%);
+    width: 150px;
+    height: 450px;
+    overflow-y: hidden;
+  }
+
+  .radar {
+    width: 100%;
+    height: 100%;
+  }
+
+  .map {
+    width: 300px;
+    height: 275px;
+    position: relative;
+  }
+
+  .stats {
+    position: absolute;
+    top: 1rem;
+    right: -30px; 
+    left: auto; 
+    transform: none;
+    width: 10rem;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+    padding: 20px;
+    padding-right: 30px;
+    overflow: visible;
+  }
+
+  .statGroup {
+    gap: 0px;
+    position: relative;
+  }
+
+  .statColumn > :not(:first-child) {
+    margin-top: 30px;
+  }
+
+  .statItem {
+    font-size: 1rem;
+    width: 3rem;
+    white-space: normal;
+  }
+
+  .statText {
+    font-size: 0.6em;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 375px) {
+  .mainText {
+    position: static;
+    line-height: 1.4;
+    padding: 15px;
+    color: #fff;
+    z-index: 2;
+    font-size: 0.7rem;
+    font-weight: 300;
+    text-align: left; 
+    white-space: normal;
+    max-width: none;
+  }
+
+  .logoShifted {
+    position: absolute;
+    width: 130px;
+    height: 90px;
+    margin: 0.5rem;
+    top: 58%;
+    left: 60%;
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 430px) {
+  .mainText {
+    position: static;
+    line-height: 1.4;
+    padding: 15px;
+    padding-bottom: 30px;
+    color: #fff;
+    z-index: 2;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: left; 
+    white-space: normal;
+    max-width: none;
+  }
+
+  .logoShifted {
+    position: absolute;
+    width: 130px;
+    height: 90px;
+    margin: 0.5rem;
+    top: 62%;
+    left: 60%;
+    overflow-y: hidden;
+  }
+}
